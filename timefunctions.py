@@ -44,3 +44,10 @@ def seconds_to_years(secs):
 def print_seconds_to_years(secs):
     years, months, weeks, days, hours, minutes, seconds = seconds_to_years(secs)
     print(f"{secs} seconds is {years} years, {months} months, {weeks} weeks, {days} days, {hours} hours, {minutes} minutes, and {seconds} seconds.")
+
+def seconds_to_milliseconds(secs):
+    milliseconds = secs * 1000
+    return milliseconds
+def print_seconds_to_milliseconds(secs):
+    milliseconds = seconds_to_milliseconds
+    print(f"{milliseconds/1000} seconds is {milliseconds} milliseconds.")
