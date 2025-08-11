@@ -1,27 +1,27 @@
 def seconds_to_minutes(secs):
     minutes = secs // 60
     seconds = secs % 60
-    print(str(secs) + " seconds is " + str(minutes) + " minutes and " + str(seconds) + " seconds.")
+    print(str(secs) + " seconds is " + str(minutes) + " minutes, and " + str(seconds) + " seconds.")
     return minutes, seconds
 def seconds_to_hours(secs):
     hours = secs // 3600
     minutes, seconds = seconds_to_minutes(secs % 3600)
-    print(str(secs) + " seconds is " + str(hours) + " hours, " + str(minutes) + " minutes and " + str(seconds) + " seconds.")
+    print(str(secs) + " seconds is " + str(hours) + " hours, " + str(minutes) + " minutes, and " + str(seconds) + " seconds.")
     return hours, minutes, seconds
 def seconds_to_days(secs):
     days = secs // 86400
     hours, minutes, seconds = seconds_to_hours(secs % 86400)
-    print(str(secs) + " seconds is " + str(days) + " days, " + str(hours) + " hours, " + str(minutes) + " minutes and " + str(seconds) + " seconds.")
+    print(str(secs) + " seconds is " + str(days) + " days, " + str(hours) + " hours, " + str(minutes) + " minutes, and " + str(seconds) + " seconds.")
     return days, hours, minutes, seconds
 def seconds_to_weeks(secs):
     weeks = secs // 604800
     days, hours, minutes, seconds = seconds_to_days(secs % 604800)
-    print(str(secs) + " seconds is " + str(weeks) + " weeks, " + str(days) + " days, " + str(hours) + " hours, " + str(minutes) + " minutes and " + str(seconds) + " seconds.")
+    print(str(secs) + " seconds is " + str(weeks) + " weeks, " + str(days) + " days, " + str(hours) + " hours, " + str(minutes) + " minutes, and " + str(seconds) + " seconds.")
     return weeks, days, hours, minutes, seconds
 def seconds_to_months(secs):
     months = secs // 2592000
     weeks, days, hours, minutes, seconds = seconds_to_days(secs % 2592000)
-    print(str(secs) + " seconds is " + str(months) + " weeks, " + str(weeks) + " weeks, " + str(days) + " days, " + str(hours) + " hours, " + str(minutes) + " minutes and " + str(seconds) + " seconds.")
+    print(str(secs) + " seconds is " + str(months) + " weeks, " + str(weeks) + " weeks, " + str(days) + " days, " + str(hours) + " hours, " + str(minutes) + " minutes, and " + str(seconds) + " seconds.")
     return months, weeks, days, hours, minutes, seconds
 
 # Test cases go here. You have no idea how easy it is to fuck up simple math.
