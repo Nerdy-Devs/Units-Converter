@@ -1,7 +1,7 @@
 from timefunctions import *
 
 def convert_seconds_menu():
-    choice = int(input("What do you want to convert seconds to?\n0:Minutes\n1:Hours\n"))
+    choice = int(input("What do you want to convert seconds to?\n0:Minutes\n1:Hours\n2:Days"))
     secs = int(input("How many seconds would you like to convert? "))
     if choice == 0:
         seconds, minutes = seconds_to_minutes(secs)
@@ -9,6 +9,9 @@ def convert_seconds_menu():
     elif choice == 1:
         seconds, minutes, hours = seconds_to_hours(secs)
         print(str(secs) + " seconds is " + str(hours) + " hours, " + str(minutes) + " minutes and " + str(seconds) + " seconds.")
+    elif choice == 2:
+        seconds, minutes, hours, days = seconds_to_days(secs)
+        print(str(secs) + " seconds is " + str(days) + " days, " + str(hours) + " hours, " + str(minutes) + " minutes and " + str(seconds) + " seconds.")
     else:
         print("Invalid seconds conversion")
 def time_conversion_menu():
