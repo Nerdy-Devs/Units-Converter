@@ -5,15 +5,15 @@ def convert_seconds_menu():
     secs = int(input("How many seconds would you like to convert?: "))
     match choice:
         case 0:
-            seconds_to_minutes(secs)
+            print_seconds_to_minutes(secs)
         case 1:
-            seconds_to_hours(secs)
+            print_seconds_to_hours(secs)
         case 2:
-            seconds_to_days(secs)
+            print_seconds_to_days(secs)
         case 3:
-            seconds_to_weeks(secs)
+            print_seconds_to_weeks(secs)
         case 4:
-            seconds_to_months(secs)
+            print_seconds_to_months(secs)
         case _:
             print("Invalid seconds conversion")
 

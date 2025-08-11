@@ -1,29 +1,40 @@
 def seconds_to_minutes(secs):
     minutes = secs // 60
     seconds = secs % 60
-    print(str(secs) + " seconds is " + str(minutes) + " minutes, and " + str(seconds) + " seconds.")
     return minutes, seconds
+def print_seconds_to_minutes(secs):
+    minutes, seconds = seconds_to_minutes(secs)
+    print(f"{secs} seconds is {minutes} minutes, and {seconds} seconds.")
 def seconds_to_hours(secs):
     hours = secs // 3600
     minutes, seconds = seconds_to_minutes(secs % 3600)
-    print(str(secs) + " seconds is " + str(hours) + " hours, " + str(minutes) + " minutes, and " + str(seconds) + " seconds.")
     return hours, minutes, seconds
+def print_seconds_to_hours(secs):
+    hours, minutes, seconds = seconds_to_hours(secs)
+    print(f"{secs} seconds is {hours} hours, {minutes} minutes, and {seconds} seconds.")
 def seconds_to_days(secs):
     days = secs // 86400
     hours, minutes, seconds = seconds_to_hours(secs % 86400)
-    print(str(secs) + " seconds is " + str(days) + " days, " + str(hours) + " hours, " + str(minutes) + " minutes, and " + str(seconds) + " seconds.")
     return days, hours, minutes, seconds
+def print_seconds_to_days(secs):
+    days, hours, minutes, seconds = seconds_to_days(secs)
+    print(f"{secs} seconds is {days} days, {hours} hours, {minutes} minutes, and {seconds} seconds.")
 def seconds_to_weeks(secs):
     weeks = secs // 604800
     days, hours, minutes, seconds = seconds_to_days(secs % 604800)
-    print(str(secs) + " seconds is " + str(weeks) + " weeks, " + str(days) + " days, " + str(hours) + " hours, " + str(minutes) + " minutes, and " + str(seconds) + " seconds.")
     return weeks, days, hours, minutes, seconds
+def print_seconds_to_weeks(secs):
+    weeks, days, hours, minutes, seconds = seconds_to_weeks(secs)
+    print(f"{secs} seconds is {weeks} weeks, {days} days, {hours} hours, {minutes} minutes, and {seconds} seconds.")
+
 def seconds_to_months(secs):
     months = secs // 2592000
     weeks, days, hours, minutes, seconds = seconds_to_days(secs % 2592000)
-    print(str(secs) + " seconds is " + str(months) + " weeks, " + str(weeks) + " weeks, " + str(days) + " days, " + str(hours) + " hours, " + str(minutes) + " minutes, and " + str(seconds) + " seconds.")
     return months, weeks, days, hours, minutes, seconds
 
+def print_seconds_to_months(secs):
+    months, weeks, days, hours, minutes, seconds = seconds_to_months(secs)
+    print(f"{secs} seconds is {months} months, {weeks} weeks, {days} days, {hours} hours, {minutes} minutes, and {seconds} seconds.")
 # Test cases go here. You have no idea how easy it is to fuck up simple math.
 # Love, James <3
 
