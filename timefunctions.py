@@ -14,3 +14,7 @@ def seconds_to_weeks(secs):
     weeks = secs // 604800
     days, hours, minutes, seconds = seconds_to_days(secs % 604800)
     print(str(secs) + " seconds is " + str(weeks) + " weeks, " + str(days) + " days, " + str(hours) + " hours, " + str(minutes) + " minutes and " + str(seconds) + " seconds.")
+def seconds_to_months(secs):
+    months = secs // 2592000
+    weeks, days, hours, minutes, seconds = seconds_to_days(secs % 2592000)
+    print(str(secs) + " seconds is " + str(months) + " weeks, " + str(weeks) + " weeks, " + str(days) + " days, " + str(hours) + " hours, " + str(minutes) + " minutes and " + str(seconds) + " seconds.")
