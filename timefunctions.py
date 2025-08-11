@@ -12,3 +12,7 @@ def seconds_to_days(secs):
     days = math.floor(secs / 86400)
     hours, minutes, seconds = seconds_to_hours(secs % 86400)
     return days, hours, minutes, seconds
+def seconds_to_weeks(secs):
+    weeks = math.floor(secs / 604800)
+    days, hours, minutes, seconds = seconds_to_days(secs % 604800)
+    return weeks, days, hours, minutes, seconds
