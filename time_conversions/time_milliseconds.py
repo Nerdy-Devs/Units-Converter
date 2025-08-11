@@ -1,3 +1,6 @@
+# !TODO! make these classes which have values (60000) and and also what there unit names (min) are
+# and also "nice names" (minutes)
+
 MILLISECONDS: int = 1
 SECONDS: int = MILLISECONDS * 1000
 MINUTES: int = SECONDS * 60

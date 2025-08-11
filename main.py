@@ -19,9 +19,8 @@ def convert_seconds_menu():
     # the conversion math uses milliseconds
     if choice != 5:
         seconds *= 1000
-
-    print(time_milliseconds.values[choice])
-
+    
+    # Calculates the converted time
     converted_time: float = seconds / time_milliseconds.values[choice]
 
     print(converted_time)
