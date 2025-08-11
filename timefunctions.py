@@ -35,3 +35,12 @@ def seconds_to_months(secs):
 def print_seconds_to_months(secs):
     months, weeks, days, hours, minutes, seconds = seconds_to_months(secs)
     print(f"{secs} seconds is {months} months, {weeks} weeks, {days} days, {hours} hours, {minutes} minutes, and {seconds} seconds.")
+
+def seconds_to_years(secs):
+    years = secs // 31556952
+    months, weeks, days, hours, minutes, seconds = seconds_to_months(secs % 31556952)
+    return years, months, weeks, days, hours, minutes, seconds
+
+def print_seconds_to_years(secs):
+    years, months, weeks, days, hours, minutes, seconds = seconds_to_years(secs)
+    print(f"{secs} seconds is {years} years, {months} months, {weeks} weeks, {days} days, {hours} hours, {minutes} minutes, and {seconds} seconds.")
