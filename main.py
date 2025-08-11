@@ -1,11 +1,17 @@
-from timefunctions import *
-from time_conversions import time_milliseconds 
+import time_conversions
 
+def main():
+    choice = int(input("What type of conversions would you like to do?\n0: Time\n"))
+    match choice:
+        case 0:
+            time_conversion_menu()
+        case _:
+            print("Invalid conversion type")
 
 def convert_seconds_menu():
     choice = int(input("What do you want to convert seconds to?\n1: Milliseconds\n2: Minutes\n3: Hours\n4: Days\n5: Weeks(non-leap)\n6: Years\n"))
 
-    if choice -1 >= len(time_milliseconds.values) or choice < 0:
+    if choice -1 >= len(time_conversions.values) or choice < 0:
         print("Invalid selection")
         return
 
@@ -21,7 +27,7 @@ def convert_seconds_menu():
         seconds *= 1000
     
     # Calculates the converted time
-    converted_time: float = seconds / time_milliseconds.values[choice]
+    converted_time: float = seconds / time_conversions.values[choice]
 
     print(converted_time)
     
@@ -33,15 +39,8 @@ def time_conversion_menu():
         case _:
             print("Invalid time conversion")
 
-def main():
-    choice = int(input("What type of conversions would you like to do?\n0: Time\n"))
-    match choice:
-        case 0:
-            time_conversion_menu()
-        case _:
-            print("Invalid conversion type")
 main()
 
 # Test
-def intput(question: str):
-    return int(input(question))
+#def intput(question: str):
+#    return int(input(question))
