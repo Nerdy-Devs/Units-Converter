@@ -1,7 +1,7 @@
 from timefunctions import *
 
 def convert_seconds_menu():
-    choice = int(input("What do you want to convert seconds to?\n0:Minutes\n1:Hours\n2:Days\n3:Weeks\n4:Months (30 days long)"))
+    choice = int(input("What do you want to convert seconds to?\n0:Minutes\n1:Hours\n2:Days\n3:Weeks\n4:Months (30 days long)\n"))
     secs = int(input("How many seconds would you like to convert?: "))
     match choice:
         case 0:
