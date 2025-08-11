@@ -1,26 +1,31 @@
 from timefunctions import *
+from time_conversions import time_milliseconds 
+
 
 def convert_seconds_menu():
-    choice = int(input("What do you want to convert seconds to?\n0: Minutes\n1: Hours\n2: Days\n3: Weeks\n4: Months (30 days long)\n5: Years(non-leap)\n6: Milliseconds\n"))
-    secs = int(input("How many seconds would you like to convert?: "))
-    match choice:
-        case 0:
-            print_seconds_to_minutes(secs)
-        case 1:
-            print_seconds_to_hours(secs)
-        case 2:
-            print_seconds_to_days(secs)
-        case 3:
-            print_seconds_to_weeks(secs)
-        case 4:
-            print_seconds_to_months(secs)
-        case 5:
-            print_seconds_to_years
-        case 6:
-            print_seconds_to_milliseconds
-        case _:
-            print("Invalid seconds conversion")
+    choice = int(input("What do you want to convert seconds to?\n1: Milliseconds\n2: Minutes\n3: Hours\n4: Days\n5: Weeks(non-leap)\n6: Years\n"))
 
+    if choice -1 >= len(time_milliseconds.values) or choice < 0:
+        print("Invalid selection")
+        return
+
+    # Moves it one day for the array index
+    choice -= 1
+
+    # Get the seconds from the user
+    seconds: float = float(input("How many seconds would you like to convert?: "))
+
+    # If the choice isn't milliseconds, multiple the time by 1000
+    # the conversion math uses milliseconds
+    if choice != 5:
+        seconds *= 1000
+
+    print(time_milliseconds.values[choice])
+
+    converted_time: float = seconds / time_milliseconds.values[choice]
+
+    print(converted_time)
+    
 def time_conversion_menu():
     choice=int(input("What type of time unit are you trying to convert?\n0: Seconds\n"))
     match choice:
@@ -37,3 +42,7 @@ def main():
         case _:
             print("Invalid conversion type")
 main()
+
+# Test
+def intput(question: str):
+    return int(input(question))
