@@ -44,7 +44,7 @@ def print_seconds_to_weeks(secs):
 
 def seconds_to_months(secs):
     months = secs // 2592000
-    weeks, days, hours, minutes, seconds = seconds_to_days(secs % 2592000)
+    weeks, days, hours, minutes, seconds = seconds_to_weeks(secs % 2592000)
     return months, weeks, days, hours, minutes, seconds
 
 def print_seconds_to_months(secs):

@@ -5,15 +5,15 @@ def main():
     verbose = int(input("Would you like to activate verbose mode? (ex: 2 hours and 30 minutes)\n0:Yes\n1:No\n"))
     if verbose == 0 or verbose == 1:
         choice = int(input("What type of conversions would you like to do?\n0: Time\n"))
+        match choice:
+            case 0:
+                time_conversion_menu()
+            case _:
+                print("Not an option")
     else:
         print("Invalid setting")
-    match choice:
-        case 0:
-            time_conversion_menu()
-        case _:
-            print("Invalid conversion type")
 
-def unit_selector(siunit, type):
+def unit_selector(siunit: int, type):
     if siunit -1 >= len(type.values) or siunit < 0:
         print("Invalid selection")
         return
@@ -64,7 +64,3 @@ def time_conversion_menu():
             print("Invalid time conversion")
 
 main()
-
-# Test
-#def intput(question: str):
-#    return int(input(question))
